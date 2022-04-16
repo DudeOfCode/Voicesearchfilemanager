@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>
+      Barp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+  <!--<ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand = "block" class = "bol"color="danger" routerLink="/signup" routerDirection="forward" type="round"><b><em>STT</em></b></ion-button>
+      </ion-col>
+      <ion-col>
+      <ion-button class="btnstart" color="nil" routerLink="/login" routerDirection="forward" expand = "block">
+        <b>
+          <em>TTS</em>
+        </b>
+      </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+<ion-button color="tertiary" routerLink="/welcome" routerDirection="forward" type="round"><b><em>VC</em></b></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>-->
+
+
+<ion-list>
+  <ion-item>
+    <ion-input [(ngModel)]= "message" placeholder = "type here"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="subject" placeholder="subject"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="file" placeholder="choose file"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="link" placeholder="url"></ion-input>
+  </ion-item>
+</ion-list>
+
+</ion-content>

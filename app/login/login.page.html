@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Speech to Text
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class = "dama"> 
+<!-- <ion-button routerLink = "/home" routerDirection = "back">back</ion-button> -->
+
+<!--<ion-list>
+  <ion-label>Email</ion-label>
+  <ion-input color = "medium" placeholder = "example@gmail.com" id = "okna" ></ion-input>
+</ion-list>
+
+<ion-list>
+  <ion-label>Password</ion-label>
+  <ion-input class = "pawon" placeholder = "*********"></ion-input>
+</ion-list>
+<div>
+  <p style="margin-left:55px" >Forgot Password</p>
+<div>
+  <ion-button color = "primary" routerLink = "/hello" routerDirection = "forward" >Login</ion-button>
+</div>
+
+<div >
+
+<ion-button color = "medium" style = "margin-top:160px; margin-left:5px;" type = "round" routerLink = "/signup" routerDirection = "forward">Don't have an account? Sign Up</ion-button>
+</div>
+
+</div>-->
+<!--<ion-button >speech</ion-button>-->
+<ion-list>
+<ion-item>
+  <ion-label class = "baga">Speech Rate</ion-label>
+<ion-input type = "tel" [(ngModel)]="rate" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Volume</ion-label>
+<ion-input color = "tertiary"type = "tel" [(ngModel)]="volume" ></ion-input>
+</ion-item>
+
+
+<ion-item>
+  <ion-label>languages</ion-label>
+<ion-select [(ngModel)]="language">
+<ion-select-option [value] = "lang"  *ngFor="let lang of languages">{{lang}}</ion-select-option>
+</ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>voices</ion-label>
+<ion-select [(ngModel)]="voice">
+<ion-select-option [value] = "voice" *ngFor="let voice of voices" >{{voice}}</ion-select-option>
+</ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Text</ion-label>
+  <br>
+<ion-textarea class = "gud" [(ngModel)]="text" placeholder="Type your text here" ></ion-textarea>
+</ion-item>
+
+  <ion-item>
+<ion-range #range [(ngModel)]= "progress" min="0"  max = "100" color = "danger" (touchend) ="seek()" (mouseup)="seek()"></ion-range>
+  </ion-item>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="fill" type = "block"(click)="speakText()">Speak</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="fill" (click)="stopspeak()">Stop</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!--<ion-item>
+  <ion-label>Pitch</ion-label>
+<ion-input type = "tel" [(ngModel)]="pitch" ></ion-input>
+</ion-item>-->
+</ion-list>
+
+</ion-content>

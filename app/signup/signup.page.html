@@ -1,0 +1,55 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar color = "danger">
+    <ion-title>
+      Talk
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class = "bara" color="success" >
+  
+  <ion-button  (click)="start()">Start Listening</ion-button>
+<ion-button ion-button full (click)="shode()">Soshe</ion-button> 
+<ion-button ion-button full (click)="stop()">Stop</ion-button>
+<!--<ion-button ion-button full (click)="getPerm()">permssion</ion-button>-->
+
+  <ion-card>
+    <ion-card-header>This is what I understood...</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let match of matches">
+          {{ match }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!--<ion-content>
+
+  <ion-list>
+    <ion-label>Email</ion-label>
+    <ion-input></ion-input>
+  </ion-list>
+  
+  <ion-list>
+    <ion-label>New Password</ion-label>
+    <ion-input></ion-input>
+  </ion-list>
+  <div>
+  <div>
+    <ion-button color = "secondary" routerLink = "/hello" routerDirection = "back" style = "margin-left:90px">SignUp</ion-button>
+  </div>
+  
+  <div routerLink = "/login" routerDirection = "back" color = "medium" >
+  <ion-button color = "medium">Already have an account Login</ion-button>
+  </div>
+  
+  </div>
+</ion-content>-->
